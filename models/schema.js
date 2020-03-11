@@ -4,7 +4,7 @@ module.exports = `
     firstName: String!
     lastName: String!
     email: String!
-    posts: [UsersGroup!]!
+    usersGroups: [UsersGroup!]!
   }
   type UsersGroup {
     id: ID!
@@ -18,6 +18,8 @@ module.exports = `
     usersGroups: [UsersGroup!]!
   }
   type Mutation {
-    createUser(firstName: String!,lastName: String!,email: String!)
+    createUser(firstName: String!,lastName: String!,email: String!): User!
+    updateUser(firstName: String!,lastName: String!): User!
+    deleteUser(id: ID!): User!
   }
 `;
