@@ -5,4 +5,5 @@ const sequelize = new Sequelize({
 });
 require("./User")(sequelize, Sequelize.DataTypes);
 require("./UsersGroup")(sequelize, Sequelize.DataTypes);
+sequelize.sync();
 module.exports = sequelize;

@@ -1,4 +1,4 @@
-module.exports = {
+const resolvers = {
   User: {
     usersGroups: (parent, args, context, info) => parent.getUsersGroups()
   },
@@ -38,3 +38,5 @@ module.exports = {
       })
   }
 };
+
+module.exports = resolvers;
